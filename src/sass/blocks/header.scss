@@ -1,0 +1,43 @@
+@use "../base/variables.scss";
+
+.header {
+    padding: 20px 15px;
+    background-color: $white;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+    &__logo {
+        width: 52px;
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        a {
+            display: block;
+            color: $black;
+        }
+        &-counter {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 130%;
+            color: $black;
+        }
+    }
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    padding-right: 35px;
+    span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $black;
+    }
+}

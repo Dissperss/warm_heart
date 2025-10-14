@@ -1,0 +1,40 @@
+# ▶ Node.js
+node_modules/
+dist/
+.vite/
+.cache/
+.env*
+
+# ▶ Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# ▶ VS Code settings
+.vscode/
+
+# ▶ macOS / Windows / Linux system files
+.DS_Store
+Thumbs.db
+*.swp
+
+# ▶ Build artifacts
+*.tmp
+*.bak
+
+# ▶ CSS artifacts (если SCSS компилируется отдельно)
+*.css
+*.css.map
+
+# ▶ Optional lockfiles (оставь только нужный)
+# yarn.lock
+# pnpm-lock.yaml
+
+# ▶ Git folder artifacts
+*.orig
+
+# ▶ Custom ignores (при необходимости)
+# coverage/
+# test-output/
+# sass-cache/
