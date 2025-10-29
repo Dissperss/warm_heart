@@ -19,26 +19,49 @@
         />
     </head>
     <body>
-        <header class="header">
-            <nav class="header__menu">
-                <div class="header__top">
-                    <div class="burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <a href="#" class="header__logo">
-                        <img src="./src/icons/promo/logo.png" alt="logo" />
-                    </a>
-                    <div class="header__icons">
-                        <a href="#" class="header__icons-cart">
-                            <img src="./src/icons/promo/cart.svg" alt="cart" />
+        <div class="container">
+            <header class="header">
+                <nav class="header__menu">
+                    <div class="header__top">
+                        <div class="burger__mobile">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="burger__desktop">
+                            <span>Shop</span>
+                            <span>About us</span>
+                            <span>Contacts</span>
+                        </div>
+                        <a href="#" class="header__logo">
+                            <img
+                                class="header__logo-img"
+                                src="./src/icons/promo/logo.png"
+                                alt="logo"
+                            />
+                            <span class="header__logo-full">warm heart</span>
                         </a>
-                        <div class="header__icons-counter">(4)</div>
+                        <div class="header__icons">
+                            <a href="#" class="header__icons-search">
+                                <img
+                                    src="./src/icons/promo/search.svg"
+                                    alt="search"
+                                />
+                            </a>
+                            <span class="header__icons-searchText">Search</span>
+                            <a href="#" class="header__icons-cart">
+                                <img
+                                    src="./src/icons/promo/cart.svg"
+                                    alt="cart"
+                                />
+                            </a>
+                            <span class="header__icons-cartText">Cart</span>
+                            <div class="header__icons-counter">(4)</div>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </header>
+                </nav>
+            </header>
+        </div>
         <section class="promo">
             <div class="container">
                 <div class="promo__wrapper">
@@ -55,6 +78,16 @@
                         src="./src/img/promo/scarf.png"
                         alt=""
                         class="promo__img"
+                    />
+                    <img
+                        src="./src/icons/promo/top.svg"
+                        alt="arrowTop"
+                        class="promo__img-arrowTop"
+                    />
+                    <img
+                        src="./src/icons/promo/down.svg"
+                        alt="arrowDown"
+                        class="promo__img-arrowDown"
                     />
                 </div>
             </div>

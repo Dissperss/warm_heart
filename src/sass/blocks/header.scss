@@ -1,16 +1,18 @@
 @use "../base/variables.scss";
 
 .header {
-    padding: 20px 15px;
+    padding: 20px 0px;
     background-color: $white;
     &__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 0;
     }
     &__logo {
         width: 52px;
+        &-full {
+            display: none;
+        }
     }
     &__icons {
         display: flex;
@@ -19,6 +21,9 @@
         a {
             display: block;
             color: $black;
+            &:first-child {
+                display: none;
+            }
         }
         &-counter {
             font-weight: 400;
@@ -26,10 +31,16 @@
             line-height: 130%;
             color: $black;
         }
+        &-searchText {
+            display: none;
+        }
+        &-cartText {
+            display: none;
+        }
     }
 }
 
-.burger {
+.burger__mobile {
     display: flex;
     flex-direction: column;
     row-gap: 7px;
@@ -39,5 +50,96 @@
         width: 30px;
         height: 2px;
         background-color: $black;
+    }
+}
+
+.burger__desktop {
+    display: none;
+}
+
+@media screen and (min-width: 480px) {
+    .header {
+        &__logo {
+            min-width: 192px;
+            text-decoration: none;
+            &-img {
+                display: none;
+            }
+            &-full {
+                display: block;
+                font-weight: 900;
+                font-size: 28px;
+                line-height: 130%;
+                text-transform: uppercase;
+                text-align: center;
+                color: $black;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 30px 15px;
+        &__logo {
+            min-width: 250px;
+            &-full {
+                font-size: 36px;
+            }
+        }
+        &__icons {
+            a {
+                &:first-child {
+                    margin-right: 20px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .header {
+        &__icons {
+            a {
+                display: none;
+                &:first-child {
+                    display: none;
+                }
+            }
+            &-searchText {
+                margin-right: 40px;
+                display: block;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 130%;
+                color: $black;
+            }
+            &-cartText {
+                display: block;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 130%;
+                color: $black;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .burger__mobile {
+        display: none;
+    }
+
+    .burger__desktop {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        span {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 130%;
+            color: $black;
+        }
     }
 }

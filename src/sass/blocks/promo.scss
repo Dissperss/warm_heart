@@ -27,12 +27,113 @@
         left: 50%;
         transform: translateX(-50%);
         margin: 35px auto 0 auto;
+        &-arrowTop,
+        &-arrowDown {
+            display: none;
+        }
     }
+
     &__footer {
         margin-top: 90px;
         background: url("./src/img/promo/promo_bg.jpg") center center / cover
             no-repeat;
         width: 100%;
-        height: 290px;
+        height: 235px;
     }
+}
+
+@media screen and (min-width: 480px) {
+    .promo {
+        &__title {
+            font-size: 48px;
+        }
+        &__img {
+            left: 75%;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .promo {
+        padding: 90px 0 120px 0;
+        &__title {
+            font-size: 60px;
+        }
+        &__text {
+            margin-top: 30px;
+            font-size: 21px;
+            max-width: 440px;
+        }
+        &__btn {
+            margin-top: 45px;
+            font-size: 21px;
+        }
+        &__img {
+            left: 70%;
+            top: 77%;
+            z-index: 2;
+            width: 250px;
+        }
+        &__footer {
+            position: absolute;
+            right: 0;
+            top: -15%;
+            width: 250px;
+            height: 590px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .promo {
+        &__title {
+            font-size: 60px;
+            max-width: 440px;
+        }
+        &__img {
+            left: 76%;
+            top: 7%;
+            width: 300px;
+            &-arrowTop {
+                display: block;
+                position: absolute;
+                top: -20px;
+                left: 58%;
+            }
+            &-arrowDown {
+                display: block;
+                position: absolute;
+                top: 69%;
+                left: 82%;
+                z-index: 3;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .promo {
+        padding: 180px 0 210px 0;
+        &__img {
+            left: 73%;
+            top: -5%;
+            width: 450px;
+            &-arrowTop {
+                top: -60px;
+                left: 56%;
+            }
+            &-arrowDown {
+                top: 97%;
+                left: 985px;
+            }
+        }
+        &__footer {
+            width: 690px;
+            height: 773px;
+            top: -90px;
+        }
+    }
+    // &__img {
+    // }
 }
