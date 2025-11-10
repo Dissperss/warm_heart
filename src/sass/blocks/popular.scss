@@ -1,0 +1,47 @@
+.popular {
+    padding-top: 70px;
+    // position: relative;
+    &__title {
+        font-size: 36px;
+        color: $black;
+    }
+    &__product {
+        margin-top: 40px;
+        &-wrapper {
+            background: $beige;
+            border-radius: 20px;
+            padding: 40px;
+            display: block;
+            overflow: hidden;
+        }
+        &-img {
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        &-name {
+            display: block;
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            color: $black;
+        }
+        &-descr {
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-size,
+        &-price {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 140%;
+            color: $black;
+        }
+    }
+    &__slider {
+        margin-top: 40px;
+        text-align: center;
+    }
+}
