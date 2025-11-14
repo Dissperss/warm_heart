@@ -8,11 +8,18 @@
     &__product {
         margin-top: 40px;
         &-wrapper {
+            display: block;
+            overflow: hidden;
+        }
+        &-card {
+            &:last-child {
+                display: none;
+            }
+        }
+        &-bg {
             background: $beige;
             border-radius: 20px;
             padding: 40px;
-            display: block;
-            overflow: hidden;
         }
         &-img {
             margin: 0 auto;
@@ -29,7 +36,7 @@
         &-descr {
             margin-top: 5px;
             display: flex;
-            justify-content: space-between;
+            gap: 80px;
             align-items: center;
         }
         &-size,
@@ -43,5 +50,67 @@
     &__slider {
         margin-top: 40px;
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .popular {
+        &__title {
+            font-size: 40px;
+        }
+        &__product {
+            &-wrapper {
+                display: flex;
+                gap: 20px;
+            }
+            &-card {
+                &:last-child {
+                    display: block;
+                }
+            }
+            &-bg {
+                padding: 40px 25px;
+            }
+            &-img {
+                &:last-child {
+                    display: block;
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .popular {
+        padding-top: 90px;
+        &__title {
+            font-size: 48px;
+        }
+        &__product {
+            margin-top: 50px;
+            &-wrapper {
+                justify-content: space-between;
+            }
+            &-bg {
+                padding: 50px;
+            }
+            &-img {
+                min-width: 250px;
+                min-height: 250px;
+            }
+            &-name {
+                margin-top: 15px;
+                font-size: 24px;
+            }
+            &-descr {
+                gap: 180px;
+            }
+            &-size,
+            &-price {
+                font-size: 21px;
+            }
+        }
     }
 }
