@@ -1,6 +1,5 @@
 .popular {
     padding-top: 70px;
-    // position: relative;
     &__title {
         font-size: 36px;
         color: $black;
@@ -12,7 +11,13 @@
             overflow: hidden;
         }
         &-card {
-            &:last-child {
+            &.second {
+                display: none;
+            }
+            &.third {
+                display: none;
+            }
+            .plus_btn {
                 display: none;
             }
         }
@@ -64,7 +69,7 @@
                 gap: 20px;
             }
             &-card {
-                &:last-child {
+                &.second {
                     display: block;
                 }
             }
@@ -93,6 +98,11 @@
             &-wrapper {
                 justify-content: space-between;
             }
+            &-card {
+                &.third {
+                    display: block;
+                }
+            }
             &-bg {
                 padding: 50px;
             }
@@ -110,6 +120,58 @@
             &-size,
             &-price {
                 font-size: 21px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .popular {
+        &__product {
+            &-bg {
+                padding: 40px;
+            }
+            &-img {
+                min-width: 205px;
+                min-height: 205px;
+            }
+            &-descr {
+                gap: 140px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .popular {
+        padding-top: 130px;
+        &__product {
+            &-wrapper {
+                justify-content: space-between;
+                gap: 30px;
+            }
+            &-card {
+                position: relative;
+                .plus_btn {
+                    display: block;
+                    position: absolute;
+                    top: 25px;
+                    right: -10px;
+                }
+            }
+            &-bg {
+                padding: 55px;
+                &.round {
+                    border-radius: 100%;
+                }
+            }
+            &-img {
+                min-width: 265px;
+                min-height: 265px;
+                &.transformed {
+                    transform: rotate(6deg);
+                    scale: 1.15;
+                }
             }
         }
     }
