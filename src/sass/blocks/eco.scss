@@ -1,0 +1,72 @@
+@use "../base/variables.scss";
+
+.eco {
+    position: relative;
+    padding: 70px 0;
+    background: $beige;
+    &__logo {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        margin: 0 auto;
+    }
+    &__title {
+        display: block;
+        font-size: 36px;
+        text-align: center;
+        color: $black;
+    }
+    &__text {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 140%;
+        text-align: center;
+        color: $black;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .eco {
+        &__title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .eco {
+        padding: 90px 0;
+        &__logo {
+            width: 150px;
+            height: 150px;
+            top: -75px;
+        }
+        &__title {
+            font-size: 48px;
+        }
+        &__text {
+            margin: 30px auto 0 auto;
+            font-size: 21px;
+            max-width: 800px;
+        }
+    }
+}
+
+// @media screen and (min-width: 1000px) {
+//     .eco {
+//         &__text {
+//         }
+//     }
+// }
+
+@media screen and (min-width: 1920px) {
+    .eco {
+        padding: 130px 0;
+        &__logo {
+            top: -85px;
+        }
+    }
+}
