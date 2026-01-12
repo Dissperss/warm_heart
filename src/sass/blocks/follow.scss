@@ -1,0 +1,137 @@
+@use "../base/variables.scss";
+
+.follow {
+    padding: 70px 0;
+    &__title {
+        font-size: 36px;
+        color: $black;
+    }
+    &__wrapper {
+        margin-top: 40px;
+    }
+    &__block {
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            margin-top: 10px;
+        }
+        &:nth-child(3) img {
+            display: none;
+        }
+        &-text {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 140%;
+            color: $black;
+        }
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 140%;
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .follow {
+        &__title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .follow {
+        padding: 90px 0;
+        &__title {
+            font-size: 48px;
+        }
+        &__wrapper {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__block {
+            min-width: 320px;
+            &:nth-child(1) {
+                max-width: 330px;
+            }
+            &:nth-child(2) {
+                display: block;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
+            &-text {
+                margin-top: 15px;
+                font-size: 21px;
+            }
+        }
+        &__link {
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .follow {
+        &__wrapper {
+            gap: 20px;
+            max-width: 960px;
+            overflow: hidden;
+        }
+        &__block {
+            &:nth-child(1) {
+                max-width: 330px;
+            }
+            &:nth-child(2) {
+                display: block;
+                min-width: 350px;
+                max-width: 370px;
+            }
+            &:nth-child(2) a {
+                display: none;
+            }
+            &:nth-child(3) {
+                display: block;
+                margin: 0;
+            }
+            &:nth-child(3) img {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .follow {
+        padding: 130px 0;
+        &__title {
+            margin-left: 70px;
+        }
+        &__wrapper {
+            max-width: 1220px;
+            gap: 30px;
+            justify-content: center;
+        }
+        &__block {
+            &:nth-child(1) img {
+                max-width: 380px;
+                width: 100%;
+            }
+            &:nth-child(2) img {
+                max-width: 490px;
+                width: 100%;
+            }
+            &:nth-child(3) img {
+                max-width: 280px;
+                width: 100%;
+            }
+        }
+    }
+}
