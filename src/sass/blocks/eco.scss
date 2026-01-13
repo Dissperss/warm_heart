@@ -2,7 +2,7 @@
 
 .eco {
     position: relative;
-    padding: 70px 0;
+    padding-top: 70px;
     background: $beige;
     &__logo {
         position: absolute;
@@ -38,7 +38,7 @@
 
 @media screen and (min-width: 768px) {
     .eco {
-        padding: 90px 0;
+        padding-top: 90px;
         &__logo {
             width: 150px;
             height: 150px;

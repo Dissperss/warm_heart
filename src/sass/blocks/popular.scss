@@ -43,7 +43,7 @@
         &-descr {
             margin-top: 5px;
             display: flex;
-            gap: 80px;
+            justify-content: space-between;
             align-items: center;
         }
         &-size,

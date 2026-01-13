@@ -1,7 +1,7 @@
 @use "../base/variables.scss";
 
 .follow {
-    padding: 70px 0;
+    padding-top: 70px;
     &__title {
         font-size: 36px;
         color: $black;
@@ -46,7 +46,7 @@
 
 @media screen and (min-width: 768px) {
     .follow {
-        padding: 90px 0;
+        padding-top: 90px;
         &__title {
             font-size: 48px;
         }
@@ -57,9 +57,7 @@
             align-items: flex-start;
         }
         &__block {
-            min-width: 320px;
             &:nth-child(1) {
-                max-width: 330px;
             }
             &:nth-child(2) {
                 display: block;
@@ -82,17 +80,13 @@
     .follow {
         &__wrapper {
             gap: 20px;
-            max-width: 960px;
             overflow: hidden;
         }
         &__block {
             &:nth-child(1) {
-                max-width: 330px;
             }
             &:nth-child(2) {
                 display: block;
-                min-width: 350px;
-                max-width: 370px;
             }
             &:nth-child(2) a {
                 display: none;
@@ -110,28 +104,46 @@
 
 @media screen and (min-width: 1920px) {
     .follow {
-        padding: 130px 0;
-        &__title {
-            margin-left: 70px;
-        }
+        padding-top: 130px;
         &__wrapper {
-            max-width: 1220px;
+            max-width: none;
+            width: 100%;
             gap: 30px;
             justify-content: center;
+            overflow: visible;
         }
         &__block {
+            &:nth-child(1) {
+                flex-grow: 2;
+                // flex-basis: 300px;
+            }
+            &:nth-child(2) {
+                flex-grow: 4;
+                // flex-basis: 600px;
+            }
+            &:nth-child(3) {
+                flex-grow: 1;
+                // flex-basis: 200px;
+            }
             &:nth-child(1) img {
-                max-width: 380px;
                 width: 100%;
+                height: auto;
             }
             &:nth-child(2) img {
-                max-width: 490px;
                 width: 100%;
+                height: auto;
             }
             &:nth-child(3) img {
-                max-width: 280px;
                 width: 100%;
+                height: auto;
             }
+            &-text {
+                max-width: 320px;
+                font-size: 19px;
+            }
+        }
+        &__link {
+            font-size: 32px;
         }
     }
 }
